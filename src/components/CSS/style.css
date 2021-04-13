@@ -8,22 +8,35 @@ body{
     background: #2F2342;
     font-family: Consolas;
 }
+.teal-ish{
+    color: #2196f3;
+}
+.pink{
+    color: #ff0490;
+}
+
 a{
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    color: #2196f3;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     text-decoration: none;
     font-size: 2em;
     overflow: hidden;
     transition: 1s;
+    margin: 10px;
 }
-a:hover{
+.teal-ish:hover{
     color: #255784;
     background: #2196f3;
     box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 180px #2196f3;
+    transition-delay: 1s;
+}
+.pink:hover{
+    color: #e75480;
+    background: #ff0490;
+    box-shadow: 0 0 10px #ff0490,0 0 40px #ff0490,0 0 180px #ff0490;
     transition-delay: 1s;
 }
 a span{
@@ -39,24 +52,38 @@ a span{
     background: linear-gradient(90deg, transparent,#2196f3);
 }*/
 /*nth-child(1) = top rim effect left->right*/
-a span:nth-child(1){
+.teal-ish span:nth-child(1){
     top: 0;
     left: -100%;
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, transparent,#2196f3);
 }
+.pink span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#ff0490);
+}
 a:hover span:nth-child(1){
     left: 100%; /*from left to right*/
     transition: 1s;
 }
 /*nth-child(3) = bottom rim effect right->left*/
-a span:nth-child(3){
+.teal-ish span:nth-child(3){
     bottom: 0;
     right: -100%;
     width: 100%;
     height: 2px;
     background: linear-gradient(270deg, transparent,#2196f3);
+}
+.pink span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#ff0490);
 }
 a:hover span:nth-child(3){
     right: 100%; /*from right to left*/
@@ -64,12 +91,19 @@ a:hover span:nth-child(3){
     transition-delay: 0.5s; /*So they appear after each other*/
 }
 /*nth-child(2) = right rim effect top->bottom*/
-a span:nth-child(2){
+.teal-ish span:nth-child(2){
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(180deg, transparent,#2196f3);
+}
+.pink span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,#ff0490);
 }
 a:hover span:nth-child(2){
     top: 100%; /*from top to bottom*/
@@ -77,12 +111,19 @@ a:hover span:nth-child(2){
     transition-delay: 0.25s; /*So they appear after each other*/
 }
 /*nth-child(4) = left rim effect bottom->top*/
-a span:nth-child(4){
+.teal-ish span:nth-child(4){
     bottom: -100%;
     left: 0;
     width: 2px;
     height: 100%;
     background: linear-gradient(180deg, transparent,#2196f3);
+}
+.pink span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,#ff0490);
 }
 a:hover span:nth-child(4){
     bottom: 100%; /*from bottom to top*/
